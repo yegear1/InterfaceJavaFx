@@ -1,26 +1,29 @@
 package com.example.teste1;
 
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
 
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
-
-public class HomeController implements Initializable {
+public class HomeController{
 
     @FXML
-    private ListView<String> TabelaRemedio;
-
-    private List<String> string = new ArrayList<>();
-
-    private ObservableList<String> remedioSelecionado;
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        myListView.getItems().addAll(remedios);
+    protected void HomeAction(MouseEvent e) {
+        Main.changedScene("home");
     }
+    @FXML
+    protected void FuncAction(MouseEvent e) {
+        Main.changedScene("func");
+    }
+    @FXML
+    protected void MedAction(MouseEvent e) {
+        Main.changedScene("med");
+    }
+    @FXML
+    protected void ResgAction(MouseEvent e) {
+        Main.changedScene("resg");
+    }
+    @FXML
+    protected void AdminAction(MouseEvent e) {
+        Main.changedScene("admin");
+    }
+
 }
